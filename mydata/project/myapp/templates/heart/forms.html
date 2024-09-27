@@ -1,0 +1,75 @@
+{% extends 'heart/main.html' %}
+
+<title>{% block title %}Home{% endblock title %}</title>
+
+{% block content %}
+
+<div class="container-sm">
+  <h1>การพยากรณ์โรคหัวใจ</h2>
+
+  <form class="row g-3" action="" method="POST">
+    {% csrf_token %} 
+    
+    <div class="d-flex flex-wrap justify-content-center mx-5">
+    <div class="col-md-3 mx-3 mb-3" >
+    <div class="text-center"> <label for="fname">อายุ</label></div>
+  <input 
+    type="float" 
+    class="from-control"
+    name="age" 
+    required 
+    placeholder="อายุ"
+    />
+  </div>
+  <div class="col-md-3 mx-3 mb-3" >
+  <div class="text-center"><label for="fname">เพศ</label></div>
+
+    <input type="float" name="sex" class="form-control" required placeholder="เพศ" />
+  </div>
+    <div class="col-md-3 mx-3 mb-3" >
+    <div class="text-center"><label for="fname">cp</label></div>
+
+    <input type="float" name="cp" class="form-control" required placeholder="cp" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">trestbps</label></div>
+    <input type="float" name="trestbps" class="form-control" required placeholder="trestbps" /></div>
+    <div class="col-md-3 mx-3 mb-3" >
+    <div class="text-center"><label for="fname">chol</label></div>
+
+    <input type="float" name="chol" class="form-control" required placeholder="chol" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">fbs</label></div>
+    <input type="float" name="fbs" class="form-control" required placeholder="fbs" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">restecg</label></div>
+    <input type="float" name="restecg" class="form-control" required placeholder="restecg" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">thalach</label></div>
+    <input type="float" name="thalach" class="form-control" required placeholder="thalach" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">exang</label></div>
+    <input type="float" name="exang" class="form-control" required placeholder="exang" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">oldpeak </label></div>
+    <input type="float" name="oldpeak" class="form-control" required placeholder="oldpeak" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">slope</label></div>
+    <input type="float" name="slope" class="form-control" required placeholder="slope" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">ca</label></div>
+    <input type="float" name="ca" class="form-control" required placeholder="ca" /></div>
+    <div class="col-md-3 mx-3 mb-3 mt-3" >
+    <div class="text-center"><label for="fname">thal</label></div>
+
+    <input type="float" name="thal" class="form-control" required placeholder="thal" /></div>
+    
+  
+  </form>
+</div>
+ <input type="submit" class="mt-5 btn btn-success px-5 mb-6" /><br /></div>
+  
+  {% comment %} {% include 'result.html' %} {% endcomment %}
+  <br /><br />
+</div>
+
+{% endblock %}
